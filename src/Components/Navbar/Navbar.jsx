@@ -14,16 +14,30 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link>Home</Link>
+        <Link
+          className="text-xl font-bold hover:bg-[#e363ff] hover:text-white"
+          to="/"
+        >
+          Home
+        </Link>
       </li>
       <li>
-        <Link>New Task</Link>
+        <Link className="text-xl font-bold hover:bg-[#e363ff] hover:text-white">
+          Dashboard
+        </Link>
       </li>
       <li>
-        <Link>Contact Us</Link>
+        <Link className="text-xl font-bold hover:bg-[#e363ff] hover:text-white">
+          Contact Us
+        </Link>
       </li>
       <li>
-        <Link>Sign In</Link>
+        <Link
+          className="text-xl font-bold hover:bg-[#e363ff] hover:text-white"
+          to="signin"
+        >
+          Sign In
+        </Link>
       </li>
     </>
   );

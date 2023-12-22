@@ -53,7 +53,7 @@ const Login = () => {
       });
   };
   return (
-    <>
+    <div className="max-w-6xl mx-auto">
       <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
@@ -98,7 +98,7 @@ const Login = () => {
             </form>
             <p className="text-center mb-2">
               New here? Please{" "}
-              <Link to="/register" className="font-bold text-[#e363ff]">
+              <Link to="/signin" className="font-bold text-[#e363ff]">
                 Register
               </Link>
             </p>
@@ -115,7 +115,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
