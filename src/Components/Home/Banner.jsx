@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../assets/banner.svg";
 const Banner = () => {
   return (
@@ -16,9 +17,12 @@ const Banner = () => {
             offering organization, prioritization, and seamless collaboration
             for enhanced productivity.
           </p>
-          <button className="btn bg-[#e363ff] text-white ml-6 hover:bg-[#e363ff] hover:shadow-2xl hover:shadow-[#e363ff]">
+          <Link
+            to="/dashboard"
+            className="btn bg-[#e363ff] text-white ml-6 hover:bg-[#e363ff] hover:shadow-2xl hover:shadow-[#e363ff]"
+          >
             Let’s Explore
-          </button>
+          </Link>
         </div>
       </div>
     </div>

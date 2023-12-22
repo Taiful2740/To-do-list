@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/LoginRegister/Login";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import AuthProvider from "./AuthProvider/AuthProvider";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <PrivateRoute>
+        <Dashboard />
+      </PrivateRoute>
+    ),
     children: [{}],
   },
 ]);

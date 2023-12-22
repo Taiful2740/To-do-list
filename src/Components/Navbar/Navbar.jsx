@@ -20,10 +20,10 @@ const Navbar = () => {
         <Link>New Task</Link>
       </li>
       <li>
-        <Link>Sign In</Link>
+        <Link>Contact Us</Link>
       </li>
       <li>
-        <Link>Login</Link>
+        <Link>Sign In</Link>
       </li>
     </>
   );
@@ -60,8 +60,30 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Login</a>
+        <div className="navbar-center   md:navbar-center lg:navbar-center ">
+          {user ? (
+            <>
+              <span className="invisible lg:visible ml-4">
+                {user?.displayName}
+              </span>
+              <div className="mx-4">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <img
+                    className="w-10 rounded-full ml-2 "
+                    src={user?.photoURL}
+                    alt=""
+                  />
+                </label>
+              </div>
+              <a onClick={handleLogOut} className="btn btn-sm mr-8 lg:mx-4">
+                Sign Out
+              </a>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="btn  btn-sm">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
