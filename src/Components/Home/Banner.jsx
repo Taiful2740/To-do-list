@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import banner from "../../assets/banner.svg";
 const Banner = () => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen ">
       <div className="hero-content  flex-col lg:flex-row-reverse">
         <div className="lg:w-1/2 mr-6">
           <img

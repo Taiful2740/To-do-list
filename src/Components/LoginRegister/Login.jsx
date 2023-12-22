@@ -21,7 +21,7 @@ const Login = () => {
         console.log(result.user);
         swal("Good job!", "Login Successfully!", "success");
         if (result.user) {
-          navigate(location?.state ? location?.state : "/dashboard");
+          navigate(location?.state ? location?.state : "/");
         }
         e.target.reset();
       })
@@ -38,7 +38,7 @@ const Login = () => {
   const handleGoogle = () => {
     signInWithGoogle()
       .then(result => {
-        navigate(location?.state ? location?.state : "/dashboard");
+        navigate(location?.state ? location?.state : "/");
         console.log(result.user);
         swal("Good job!", "Login Successfully!", "success");
       })
@@ -54,7 +54,7 @@ const Login = () => {
   };
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="hero min-h-screen bg-base-200 ">
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>

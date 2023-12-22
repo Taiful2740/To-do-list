@@ -9,6 +9,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import AuthProvider from "./AuthProvider/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import SignIn from "./Components/LoginRegister/SignIn";
+import ContactUs from "./Components/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/signin",
         element: <SignIn />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
       },
     ],
   },

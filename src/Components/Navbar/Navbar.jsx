@@ -22,12 +22,18 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link className="text-xl font-bold hover:bg-[#e363ff] hover:text-white">
+        <Link
+          to="/dashboard"
+          className="text-xl font-bold hover:bg-[#e363ff] hover:text-white"
+        >
           Dashboard
         </Link>
       </li>
       <li>
-        <Link className="text-xl font-bold hover:bg-[#e363ff] hover:text-white">
+        <Link
+          to="/contact"
+          className="text-xl font-bold hover:bg-[#e363ff] hover:text-white"
+        >
           Contact Us
         </Link>
       </li>
@@ -43,7 +49,7 @@ const Navbar = () => {
   );
   return (
     <div className="max-w-6xl mx-auto ">
-      <div className="navbar bg-gray-200">
+      <div className="navbar bg-gray-200 shadow-2xl shadow-[#e363ff]">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="Login" className="btn btn-ghost lg:hidden">
