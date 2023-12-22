@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import swal from "sweetalert";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
@@ -19,7 +21,7 @@ const Login = () => {
         console.log(result.user);
         swal("Good job!", "Login Successfully!", "success");
         if (result.user) {
-          navigate(location?.state ? location?.state : "/");
+          navigate(location?.state ? location?.state : "/dashboard");
         }
         e.target.reset();
       })
@@ -36,7 +38,7 @@ const Login = () => {
   const handleGoogle = () => {
     signInWithGoogle()
       .then(result => {
-        navigate(location?.state ? location?.state : "/");
+        navigate(location?.state ? location?.state : "/dashboard");
         console.log(result.user);
         swal("Good job!", "Login Successfully!", "success");
       })
@@ -58,7 +60,7 @@ const Login = () => {
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div className="card flex-shrink-0 w-96 mt-4 max-w-sm shadow-2xl shadow-[#e363ff] bg-base-100">
-            <form>
+            <form onClick={handleLogin}>
               <div className="card-body">
                 <div className="form-control">
                   <label className="label">
@@ -102,7 +104,10 @@ const Login = () => {
             </p>
             <p className="text-lg text-center font-bold">or</p>
             <p className="text-center mb-6 mt-2">
-              <button className="btn bg-[#e363ff] text-white">
+              <button
+                onClick={handleGoogle}
+                className="btn bg-[#e363ff] text-white"
+              >
                 <FaGoogle></FaGoogle>
                 Login With Google
               </button>
